@@ -12,13 +12,11 @@ public class Lion {
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
 
-    Feline feline = new Feline();
-
-    public int getKittens() {
+    public int getKittens(Feline feline) {
         return feline.getKittens();
     }
 
@@ -26,7 +24,7 @@ public class Lion {
         return hasMane;
     }
 
-    public List<String> getFood() throws Exception {
+    public List<String> getFood(Feline feline) throws Exception {
         return feline.getFood("Хищник");
     }
 }
